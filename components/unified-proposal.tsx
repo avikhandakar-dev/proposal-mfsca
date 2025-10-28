@@ -582,15 +582,6 @@ export function UnifiedProposal({
                   </div>
                 </div>
               </div>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <p className="text-sm text-blue-800">
-                  <strong>Implementation Commitment:</strong> All current MFSCA
-                  features and business rules will be fully implemented in the
-                  new system before going to production. No additional charges
-                  will apply for these previously discussed requirements.
-                </p>
-              </div>
             </CardContent>
           </Card>
 
