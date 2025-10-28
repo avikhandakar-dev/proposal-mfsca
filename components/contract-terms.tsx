@@ -1,7 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, XCircle, DollarSign, Clock } from "lucide-react"
+import { Calendar, XCircle, DollarSign, Clock, Globe, Database, Shield, CheckCircle } from "lucide-react"
 
 const terms = [
+  {
+    icon: Globe,
+    title: "White Labeling & Domain",
+    description: "Complete white labeling included with your custom domain. Full branding control and ownership.",
+  },
+  {
+    icon: Database,
+    title: "Data Ownership & Portability",
+    description: "You own all your data. Complete data portability guaranteed. Daily automated backups with 30-day retention.",
+  },
+  {
+    icon: Shield,
+    title: "Infrastructure & Security",
+    description: "Secure cloud infrastructure with daily backups. Data export available in standard formats anytime.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Implementation Billing",
+    description: "Billing begins only after full implementation and client acceptance. No charges during development phase.",
+  },
   {
     icon: Calendar,
     title: "Flexible Terms",
@@ -10,17 +30,17 @@ const terms = [
   {
     icon: XCircle,
     title: "Easy Cancellation",
-    description: "30-day notice, cancel anytime without penalties",
+    description: "30-day notice, cancel anytime without penalties. Full data export provided upon cancellation.",
   },
   {
     icon: DollarSign,
-    title: "No Setup Fees",
-    description: "Setup fee waived for MFSCA - get started immediately",
+    title: "Transparent Pricing",
+    description: "No hidden costs. All third-party fees (Stripe, Mailgun, SMS) included in stated pricing.",
   },
   {
     icon: Clock,
-    title: "Quick Payment",
-    description: "Net 15 days from invoice date, billed monthly in USD",
+    title: "Payment Terms",
+    description: "Net 15 days from invoice date, billed monthly in CAD after platform is fully operational",
   },
 ]
 
@@ -33,7 +53,7 @@ export function ContractTerms() {
           <div className="mt-3 h-1 w-20 bg-primary" />
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {terms.map((term) => (
             <Card key={term.title} className="transition-all hover:shadow-lg">
               <CardContent className="p-6 text-center">

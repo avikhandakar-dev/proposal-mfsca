@@ -8,13 +8,13 @@ interface SelectedPricingDisplayProps {
 const pricingDetails = {
   "fixed-monthly": {
     title: "Fixed Monthly Plan",
-    price: "$250/month",
-    description: "Unlimited transactions with all platform features included",
+    price: "$335/month CAD",
+    description: "Unlimited transactions with all platform features included. No hidden costs - all third-party fees included.",
   },
   "transaction-based": {
     title: "Transaction-Based Plan",
-    price: "$0/month + $0.50 per transaction",
-    description: "Pay only for what you use - perfect for variable activity",
+    price: "$0/month CAD + $0.67 per transaction CAD",
+    description: "Pay only for what you use - perfect for variable activity. Transaction fee includes all third-party costs (Stripe, Mailgun, SMS gateways).",
   },
 }
 

@@ -5,13 +5,13 @@ const services = [
   {
     icon: Settings,
     title: "Custom Enhancements",
-    price: "$50 per request",
+    price: "$67 CAD per request",
     description: "Custom report templates • Specialized workflow automation • Custom email template design",
   },
   {
     icon: Link2,
     title: "Third-Party Integrations",
-    price: "$50 per integration",
+    price: "$67 CAD per integration",
     description: "Accounting software • Payment gateways • Communication platforms",
   },
   {
