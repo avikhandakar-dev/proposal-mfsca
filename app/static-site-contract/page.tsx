@@ -1,5 +1,3 @@
-"use client";
-
 import { StaticSiteContract } from "@/components/static-site-contract";
 import { Metadata } from "next";
 
