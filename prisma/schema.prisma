@@ -21,3 +21,15 @@ model Proposal {
 
   @@map("proposals")
 }
+
+model Contract {
+  id            String   @id @default(cuid())
+  clientName    String
+  titlePosition String
+  date          String
+  signature     String   // Base64 encoded signature image
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("contracts")
+}

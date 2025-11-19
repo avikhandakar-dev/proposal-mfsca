@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
-// Validation schema for proposal data
-const proposalSchema = z.object({
+// Validation schema for contract data
+const contractSchema = z.object({
   clientName: z.string().min(1, 'Client name is required'),
   titlePosition: z.string().min(1, 'Title/Position is required'),
   date: z.string().min(1, 'Date is required'),
@@ -15,10 +15,10 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     
     // Validate the request data
-    const validatedData = proposalSchema.parse(body)
+    const validatedData = contractSchema.parse(body)
     
     // Save to database
-    const proposal = await prisma.proposal.create({
+    const contract = await prisma.contract.create({
       data: {
         clientName: validatedData.clientName,
         titlePosition: validatedData.titlePosition,
@@ -30,13 +30,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Proposal submitted successfully',
-        id: proposal.id 
+        message: 'Contract submitted successfully',
+        id: contract.id 
       },
       { status: 201 }
     )
   } catch (error) {
-    console.error('Error saving proposal:', error)
+    console.error('Error saving contract:', error)
     
     if (error instanceof z.ZodError) {
       return NextResponse.json(
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
-    const proposals = await prisma.proposal.findMany({
+    const contracts = await prisma.contract.findMany({
       orderBy: {
         createdAt: 'desc',
       },
@@ -69,10 +69,10 @@ export async function GET() {
     
     return NextResponse.json({
       success: true,
-      data: proposals,
+      data: contracts,
     })
   } catch (error) {
-    console.error('Error fetching proposals:', error)
+    console.error('Error fetching contracts:', error)
     
     return NextResponse.json(
       { 
@@ -93,25 +93,25 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json(
         { 
           success: false, 
-          message: 'Proposal ID is required' 
+          message: 'Contract ID is required' 
         },
         { status: 400 }
       )
     }
     
-    await prisma.proposal.delete({
+    await prisma.contract.delete({
       where: { id },
     })
     
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Proposal deleted successfully' 
+        message: 'Contract deleted successfully' 
       },
       { status: 200 }
     )
   } catch (error) {
-    console.error('Error deleting proposal:', error)
+    console.error('Error deleting contract:', error)
     
     return NextResponse.json(
       { 
@@ -122,3 +122,4 @@ export async function DELETE(request: NextRequest) {
     )
   }
 }
+
