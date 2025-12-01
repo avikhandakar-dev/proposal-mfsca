@@ -501,7 +501,7 @@ export function StaticSiteContract() {
                     </h3>
                     <p className="text-sm text-slate-600 leading-relaxed">
                       We commit to responding to maintenance requests and bug
-                      reports within 48 business hours. Critical issues will be
+                      reports within 12 business hours. Critical issues will be
                       addressed with priority.
                     </p>
                   </div>

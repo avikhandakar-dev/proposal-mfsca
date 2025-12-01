@@ -718,7 +718,7 @@ export function UnifiedProposal({
             {/* Pricing Note */}
             <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <p className="text-sm text-blue-800">
-                <strong>Note:</strong> After 2 year, each year will increase by 5%.
+                <strong>Note:</strong> After 2 year, each year will increase by 2%.
               </p>
             </div>
           </div>
