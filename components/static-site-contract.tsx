@@ -38,7 +38,9 @@ import {
   GitBranch,
   Server,
   Globe,
+  XCircle,
 } from "lucide-react";
+
 
 // Zod schema for form validation
 const contractFormSchema = z.object({
@@ -537,7 +539,24 @@ export function StaticSiteContract() {
                   </div>
                 </div>
               </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <XCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-medium text-slate-900">
+                      Contract Termination
+                    </h3>
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      The contract can be terminated with 30 days written notice.
+                      This provides both parties with flexibility while ensuring
+                      a smooth transition period if needed.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
+
           </Card>
 
           {/* Contact Information */}
@@ -709,9 +728,11 @@ export function StaticSiteContract() {
                         <p className="text-blue-700 text-xs leading-relaxed">
                           By signing this contract, you agree to the monthly
                           billing terms, service scope, and limitations as
-                          outlined above. New features will require a separate
-                          contract agreement.
+                          outlined above. The contract can be terminated with 30
+                          days written notice. New features will require a
+                          separate contract agreement.
                         </p>
+
                       </div>
                     </div>
 

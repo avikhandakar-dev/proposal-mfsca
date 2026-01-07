@@ -468,6 +468,23 @@ export function UnifiedProposal({
                       </div>
                     </div>
                   </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-start space-x-3">
+                      <XCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+                      <div>
+                        <h3 className="text-lg font-medium text-slate-900">
+                          Contract Termination
+                        </h3>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          The contract can be terminated with 30 days written notice.
+                          This provides both parties with flexibility while ensuring
+                          a smooth transition period if needed.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </CardContent>
@@ -663,13 +680,12 @@ export function UnifiedProposal({
                 <Card
                   key={option.title}
                   onClick={() => onSelectOption(option.id)}
-                  className={`cursor-pointer transition-all border-2 hover:shadow-md ${
-                    selectedOption === option.id
+                  className={`cursor-pointer transition-all border-2 hover:shadow-md ${selectedOption === option.id
                       ? "border-blue-500 shadow-lg"
                       : option.recommended
-                      ? "border-blue-200"
-                      : "border-slate-200"
-                  }`}
+                        ? "border-blue-200"
+                        : "border-slate-200"
+                    }`}
                 >
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
@@ -968,9 +984,11 @@ export function UnifiedProposal({
                         <p className="text-blue-700 text-xs leading-relaxed">
                           By signing this proposal, you agree to the payment
                           terms, project timeline, and scope as outlined above.
-                          All work remains property of Bayah until final payment
-                          is received.
+                          The contract can be terminated with 30 days written
+                          notice. All work remains property of Bayah until final
+                          payment is received.
                         </p>
+
                       </div>
                     </div>
 
