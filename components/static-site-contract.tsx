@@ -41,7 +41,6 @@ import {
   XCircle,
 } from "lucide-react";
 
-
 // Zod schema for form validation
 const contractFormSchema = z.object({
   clientName: z
@@ -260,11 +259,18 @@ export function StaticSiteContract() {
                 />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white">Alpha Numeric Webs</h1>
-                <p className="text-sm text-slate-300">Static Site Management Contract</p>
+                <h1 className="text-2xl font-bold text-white">
+                  Alpha Numeric Webs
+                </h1>
+                <p className="text-sm text-slate-300">
+                  Static Site Management Contract
+                </p>
               </div>
             </div>
-            <Badge variant="outline" className="text-sm border-slate-600 text-slate-200 bg-slate-800">
+            <Badge
+              variant="outline"
+              className="text-sm border-slate-600 text-slate-200 bg-slate-800"
+            >
               Contract Proposal
             </Badge>
           </div>
@@ -372,8 +378,18 @@ export function StaticSiteContract() {
                 </div>
               </div>
 
+              <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg flex items-start space-x-3">
+                <Clock className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-blue-800 leading-relaxed">
+                  <strong>Billing Commencement:</strong> Billing will commence
+                  only after full implementation and acceptance of the platform.
+                  No charges will apply from the signing date until the system
+                  is fully operational and accepted by MFSCA.
+                </p>
+              </div>
+
               {/* Important Note */}
-              <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+              <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg">
                 <p className="text-sm text-amber-800">
                   <strong>Note:</strong> New features and functionality
                   enhancements are not included in this contract and will
@@ -518,8 +534,11 @@ export function StaticSiteContract() {
                       Billing
                     </h3>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      Monthly billing will commence upon contract signing. The
-                      contract can be terminated with 30 days written notice.
+                      Monthly billing will commence only after full
+                      implementation and acceptance of the platform by MFSCA. No
+                      charges will apply from the signing date until the system
+                      is fully operational. The contract can be terminated with
+                      30 days written notice.
                     </p>
                   </div>
                 </div>
@@ -534,7 +553,8 @@ export function StaticSiteContract() {
                     </h3>
                     <p className="text-sm text-slate-600 leading-relaxed">
                       All code and content remain the property of the client.
-                      Alpha Numeric Webs maintains access for maintenance purposes only.
+                      Alpha Numeric Webs maintains access for maintenance
+                      purposes only.
                     </p>
                   </div>
                 </div>
@@ -548,15 +568,14 @@ export function StaticSiteContract() {
                       Contract Termination
                     </h3>
                     <p className="text-sm text-slate-600 leading-relaxed">
-                      The contract can be terminated with 30 days written notice.
-                      This provides both parties with flexibility while ensuring
-                      a smooth transition period if needed.
+                      The contract can be terminated with 30 days written
+                      notice. This provides both parties with flexibility while
+                      ensuring a smooth transition period if needed.
                     </p>
                   </div>
                 </div>
               </div>
             </CardContent>
-
           </Card>
 
           {/* Contact Information */}
@@ -732,7 +751,6 @@ export function StaticSiteContract() {
                           days written notice. New features will require a
                           separate contract agreement.
                         </p>
-
                       </div>
                     </div>
 
@@ -752,4 +770,3 @@ export function StaticSiteContract() {
     </div>
   );
 }
-
